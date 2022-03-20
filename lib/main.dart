@@ -59,6 +59,38 @@ class HomeScreen extends StatelessWidget {
               )
             ],
           ),
+          const SizedBox(height: 32),
+          Container(
+            decoration: BoxDecoration(boxShadow: const [
+              BoxShadow(
+                offset: Offset(0, 9),
+                blurRadius: 32,
+                color: Color(0x1A000000),
+              )
+            ], color: Colors.white, borderRadius: BorderRadius.circular(16)),
+            height: 64,
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+            child: Row(
+              children: [
+                Opacity(
+                  opacity: 0.3,
+                  child: Transform.scale(
+                    scale: 1.2,
+                    child: const Icon(Icons.search),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                const Text(
+                  'Search',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: kLightText,
+                    fontWeight: FontWeight.w300,
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
