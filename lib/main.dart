@@ -90,7 +90,174 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          const SizedBox(height: 32),
+          const Text('Popular', style: TextStyle(color: kDarkBlue)),
+          const SizedBox(height: 16),
+          SizedBox(
+            height: 352,
+            width: double.infinity,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: kAirpodsBg,
+                  ),
+                  padding: const EdgeInsets.fromLTRB(32, 32, 32, 16),
+                  width: 256,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Stack(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              RichText(
+                                textAlign: TextAlign.center,
+                                text: const TextSpan(
+                                  style: TextStyle(
+                                      color: kAirpodsBgText, fontSize: 48),
+                                  children: [
+                                    TextSpan(text: 'AirPods\n'),
+                                    TextSpan(
+                                      text: 'Max',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          Image.asset('assets/images/airpods_max.png')
+                        ],
+                      ),
+                      const SizedBox(height: 32),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Airpods Max',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text('N12,000')
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 32),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: kXSevenWavesBg,
+                  ),
+                  padding: const EdgeInsets.fromLTRB(32, 32, 32, 16),
+                  width: 256,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Stack(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              RichText(
+                                textAlign: TextAlign.center,
+                                text: const TextSpan(
+                                  style: TextStyle(
+                                      color: kXSevenWavesBgText, fontSize: 48),
+                                  children: [
+                                    TextSpan(text: 'X-Seven\n'),
+                                    TextSpan(
+                                      text: 'Waves',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          Image.asset('assets/images/x_seven_waves.png')
+                        ],
+                      ),
+                      const SizedBox(height: 32),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'X-Seven Waves',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text('N22,000')
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 32),
+          const Text('Recommended', style: TextStyle(color: kDarkBlue)),
+          const SizedBox(height: 16),
+          SizedBox(
+            height: 256,
+            width: double.infinity,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: kRecommendedBg,
+                  ),
+                  padding: const EdgeInsets.fromLTRB(32, 32, 32, 16),
+                  width: 256,
+                  child: const Center(
+                    child: Opacity(
+                      opacity: 0.6,
+                      child: Text(
+                        'AirPods Max',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 32),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: kRecommendedBg,
+                  ),
+                  padding: const EdgeInsets.fromLTRB(32, 32, 32, 16),
+                  width: 256,
+                  child: const Center(
+                    child: Opacity(
+                      opacity: 0.6,
+                      child: Text(
+                        'AirPods Max',
+                        style: TextStyle(fontSize: 27),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
